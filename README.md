@@ -6,19 +6,23 @@ your own deepl server
 
 ## Installation
 
-*   Clone the repo []() and `cd deepl-fastapi`
+*   Clone the repo [https://github.com/ffreemt/deepl-fastapi.git](https://github.com/ffreemt/deepl-fastapi.git)
+    ```bash
+    git clone https://github.com/ffreemt/deepl-fastapi.git
+    ```
+    and `cd deepl-fastapi`
 *   `pip install -r requirements.txt
     * or ``poetry install``
 
 ## Usage
-
+Start the server
 ```bash
 uvicorn deepl_fastapi.deepl_server:app --reload
 ```
 
 Point your browser to [http://127.0.0.1:8000/text/?q=test&to_lang=zh](http://127.0.0.1:8000/text/?q=test&to_lang=zh)
 
-Or in python code (`pip install requests`)
+Or in python code (`pip install requests` first)
 ```python
 import requests
 
