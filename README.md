@@ -30,7 +30,8 @@ text = "test this and that"
 data = {"text": text, "to_lang": "zh"}
 resp = requests.post("http://127.0.0.1:8000", data=data)
 print(resp.json)
-# {'q': {'text': 'test this and that', 'from_lang': None, 'to_lang': 'zh', 'description': None}, 'result': '试探 左右逢源 检验 审时度势'}
+# {'q': {'text': 'test this and that', 'from_lang': None, 'to_lang': 'zh', 'description': None},
+# 'result': '试探 左右逢源 检验 审时度势'}
 
 ```
 
