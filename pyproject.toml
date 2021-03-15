@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "deepl-fastapi"
+version = "0.1.0"
+description = "deepl via fastapi"
+authors = ["freemt"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ffreemt/repo-name"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+logzero = "^1.6.3"
+fastapi = "^0.63.0"
+uvicorn = "^0.13.4"
+deepl-scraper-pp = "^0.1.1"
+portalocker = "^2.2.1"
+waitress = "^2.0.0"
+nest-asyncio = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.9.0"
+tbump = "^6.3.1"
+ipython = "^7.21.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+# Uncomment this if your project is hosted on GitHub:
+# github_url = "https://github.com/<user or organization>/<project>/"
+
+[tool.tbump.version]
+current = "0.1.0"
+
+# Example of a semver regexp.
+# Make sure this matches current_version before
+# using tbump
+regex = '''
+  (?P<major>\d+)
+  \.
+  (?P<minor>\d+)
+  \.
+  (?P<patch>\d+)
+  '''
+
+[tool.tbump.git]
+message_template = "Bump to {new_version}"
+tag_template = "v{new_version}"
+
+# For each file to patch, add a [[tool.tbump.file]] config
+# section containing the path of the file, relative to the
+# tbump.toml location.
+[[tool.tbump.file]]
+src = "*/__init__.py"
+[[tool.tbump.file]]
+src = "package.json"
+
+# You can specify a list of commands to
+# run after the files have been patched
+# and before the git commit is made
+
+#  [[tool.tbump.before_commit]]
+#  name = "check changelog"
+#  cmd = "grep -q {new_version} Changelog.rst"
+
+# Or run some commands after the git tag and the branch
+# have been pushed:
+#  [[tool.tbump.after_push]]
+#  name = "publish"
+#  cmd = "./publish.sh"
