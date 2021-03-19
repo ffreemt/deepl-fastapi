@@ -13,6 +13,10 @@ or (if your use poetry)
 poetry add deepl-fastapi
 ```
 or
+```
+ pip install git+https://github.com/ffreemt/deepl-fastapi.git
+```
+or
 *   Clone the repo [https://github.com/ffreemt/deepl-fastapi.git](https://github.com/ffreemt/deepl-fastapi.git)
     ```bash
     git clone https://github.com/ffreemt/deepl-fastapi.git

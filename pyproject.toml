@@ -14,8 +14,9 @@ fastapi = "^0.63.0"
 uvicorn = "^0.13.4"
 portalocker = "^2.2.1"
 nest-asyncio = "^1.5.1"
-get-ppbrowser = {git = "https://github.com/ffreemt/get-ppbrowser.git", rev = "dev"}
-deepl-scraper-pp = {git = "https://github.com/ffreemt/deepl-scraper-pyppeteer.git", rev = "dev"}
+get-ppbrowser = "^0.1.3"
+deepl-scraper-pp = "^0.1.2"
+requests = "^2.25.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -23,7 +24,6 @@ flake8 = "^3.9.0"
 tbump = "^6.3.1"
 ipython = "^7.21.0"
 micropipenv = "^1.0.3"
-requests = "^2.25.1"
 httpx = "^0.17.1"
 
 [tool.poetry.scripts]
