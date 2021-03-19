@@ -4,14 +4,13 @@
   "description": "deepl via fastapi",
   "main": "index.js",
   "scripts": {
-    "pyright": "nodemon -w deepl_fastapi -w .venv -e .py -x pyright deepl_fastapi",
+    "pyright": "nodemon -w tests -w deepl_fastapi -w .venv -e .py -x pyright tests deepl_fastapi",
     "pytest": "nodemon -w tests -w deepl_fastapi -e .py -x pytest tests",
-    "style": "nodemon -w deepl_fastapi -w tests -x black tests deepl_fastapi",
-    "flake8": "nodemon -w deepl_fastapi -w tests -x python -m flake8",
+    "style": "nodemon -w deepl_fastapi -w tests -x \"black tests deepl_fastapi && python -m flake8\"",
     "pylint": "nodemon -w deepl_fastapi -e .py -x pylint deepl_fastapi",
     "test:deepl_tr": "nodemon -w tests -e .py -x pytest -k deepl_tr tests",
-    "serve_": "nodemon -w deepl_fastapi -e .py -x python -m deepl_fastapi.deepl_server",
-    "serve": "uvicorn deepl_fastapi.deepl_server:app --reload"
+    "serve_m": "nodemon -w deepl_fastapi -e .py -x python -m deepl_fastapi",
+    "serve_u": "uvicorn deepl_fastapi.deepl_server:app --reload"
   },
   "license": "MIT"
 }
