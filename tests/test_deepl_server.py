@@ -52,8 +52,12 @@ def test_deepl_server():
         res = str(_.json())
     except Exception as exc:
         logger.error(exc)
-        sleep(20)
+
         # try one more time
+        if os.name.lower() in ["posix"]:  # linux and friends
+            sleep(25)
+        else:  # Windows wait longer
+            sleep(40)
         try:
             _ = requests.get("http://127.0.0.1:8000/text/?q=test me", verify=False)
             res = str(_.json())
