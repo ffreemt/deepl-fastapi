@@ -22,7 +22,7 @@ def run_uvicorn(host="127.0.0.1", port=8000, debug=False, reload=False):
     )
 
 
-if __name__ == "__main__":
+def main():
     signal(SIGINT, SIG_DFL)
     print("ctrl-C to interrupt")
 
@@ -49,3 +49,7 @@ if __name__ == "__main__":
     except Exception as exc:
         logger.error(exc)
         raise SystemExit(1) from exc
+
+
+if __name__ == "__main__":
+    main()

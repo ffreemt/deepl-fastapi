@@ -26,6 +26,9 @@ micropipenv = "^1.0.3"
 requests = "^2.25.1"
 httpx = "^0.17.1"
 
+[tool.poetry.scripts]
+deepl-fastapi = "deepl_fastapi.run_uvicorn:main"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"

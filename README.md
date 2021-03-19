@@ -38,6 +38,11 @@ or
 *   Start the server
 
 ```bash
+deepl-fastapi
+# this option is available only if installed via pip install or poetry add
+```
+
+```bash
 python3.7 -m deepl_fastapi.run_uvicorn
 ```
 or using uvicorn directly (note the `deepl_server` module, not `run_uvicorn`)
