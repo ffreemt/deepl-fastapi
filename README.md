@@ -41,18 +41,22 @@ or
 
 *   Start the server
 
+Use uvicorn directly (note the `deepl_server` module, not `run_uvicorn`)
+```bash
+uvicorn deepl_fastapi.deepl_server:app
+```
+
+or
 ```bash
 deepl-fastapi
 # this option is available only if installed via pip install or poetry add
 ```
 
+or
 ```bash
 python3.7 -m deepl_fastapi.run_uvicorn
 ```
-or using uvicorn directly (note the `deepl_server` module, not `run_uvicorn`)
-```bash
-uvicorn deepl_fastapi.deepl_server:app --reload
-```
+
 or run the server on the external net, for example at port 9888
 ```
 uvicorn deepl_fastapi.deepl_server:app --reload --host 0.0.0.0 --port 9888
