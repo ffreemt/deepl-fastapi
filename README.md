@@ -5,6 +5,18 @@
 your own deepl server via fastapi, cross-platform (Windows/Linux/MacOs)
 
 ## Installation
+*   Create a virual environment: optional but recommended
+    e.g.,
+    ```bash
+    # Linux and friends
+    python3.7 -m venv .venv
+    source .venv/bin/activate
+
+    # Windows
+    # py -3.7 -m venv .venv
+    # .venv\Scripts\activate
+    ```
+
 ```bash
 pip install deepl-fastapi
 ```
@@ -26,18 +38,6 @@ or
     * or ``poetry install``
 
 ## Usage
-
-*   (Optional) but recommended: Create a virual environment
-    e.g.,
-    ```bash
-    # Linux and friends
-    python3.7 -m venv .venv
-    source .venv/bin/activate
-
-    # Windows
-    # py -3.7 -m venv .venv
-    # .venv\Scripts\activate
-    ```
 
 *   Start the server
 
