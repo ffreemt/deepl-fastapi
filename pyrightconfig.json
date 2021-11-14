@@ -1,6 +1,6 @@
 {
 	"include": ["tests", "extend_noip"],
-  "venvPath": ".venv/Scripts",
+  "venvPath": ".venv",
   "reportTypeshedErrors": false,
   "reportMissingImports": true,
   "reportMissingTypeStubs": false,
