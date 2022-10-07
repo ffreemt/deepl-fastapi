@@ -91,9 +91,9 @@ print(resp.json())
  [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 ## OmegaT ``Fake MT`` plugin setup
-* omegat-plugin-fake-mt-1.0.0.jar （可从https://github.com/briacp/omegat-plugin-fake-mt下载） 拷至 OmegaT\plugins （例如 C:\Program Files\OmegaT\plugins） 
+* Copy ``omegat-plugin-fake-mt-1.0.0.jar`` （available at https://github.com/briacp/omegat-plugin-fake-mt） to OmegaT\plugins （e.g., C:\Program Files\OmegaT\plugins） 
 
-运行``OmegaT``设置``omegat-plugin-fake-mt``
+Run``OmegaT``and setup ``omegat-plugin-fake-mt``
 ```bash
 OmegaT/Preferences/Machine Translation/Fake MT/Configure
 	Name: Fake Deepl MT
@@ -102,3 +102,4 @@ OmegaT/Preferences/Machine Translation/Fake MT/Configure
 	Target Parameter: to_lang
 	Text Parameter: q
 ```
+[](https://github.com/ffreemt/deepl-fastapi/blob/master/img/plugin-setup.png)
