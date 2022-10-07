@@ -102,4 +102,4 @@ OmegaT/Preferences/Machine Translation/Fake MT/Configure
 	Target Parameter: to_lang
 	Text Parameter: q
 ```
-[](https://github.com/ffreemt/deepl-fastapi/blob/master/img/plugin-setup.png)
+![](img/plugin-setup.png)
