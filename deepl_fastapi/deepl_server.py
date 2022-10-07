@@ -121,6 +121,7 @@ async def get_text(
         trtext = str(exc)
 
     result.update({"trtext": trtext})
+    result.update({"translation": trtext})
 
     logger.debug("result: %s", result)
 

@@ -86,6 +86,19 @@ print(resp.json())
 
 ```
 
-## Interactice Docs (Swagger UI)
+## Interactive Docs (Swagger UI)
 
  [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+## OmegaT ``Fake MT`` plugin setup
+* omegat-plugin-fake-mt-1.0.0.jar （可从https://github.com/briacp/omegat-plugin-fake-mt下载） 拷至 OmegaT\plugins （例如 C:\Program Files\OmegaT\plugins） 
+
+运行``OmegaT``设置``omegat-plugin-fake-mt``
+```bash
+OmegaT/Preferences/Machine Translation/Fake MT/Configure
+	Name: Fake Deepl MT
+	URL: http://localhost:8000/text
+	Source Parameter: from_lang
+	Target Parameter: to_lang
+	Text Parameter: q
+```
