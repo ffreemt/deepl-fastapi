@@ -16,7 +16,7 @@ import portalocker
 import logzero
 from logzero import logger
 
-logzero.loglevel(10)
+# logzero.loglevel(10)
 
 import uvicorn
 from fastapi import FastAPI, Query
