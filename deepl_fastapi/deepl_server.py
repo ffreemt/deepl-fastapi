@@ -13,10 +13,11 @@ import asyncio
 from signal import signal, SIGINT, SIG_DFL
 
 import portalocker
-import logzero
+
+# import logzero
 from logzero import logger
 
-logzero.loglevel(10)
+# logzero.loglevel(10)
 
 import uvicorn
 from fastapi import FastAPI, Query
