@@ -2,7 +2,7 @@
 <!--- repo-name  pypi-name  mod_name func_name --->
 [![tests](https://github.com/ffreemt/deepl-fastapi/actions/workflows/routine-tests.yml/badge.svg)][![python](https://img.shields.io/static/v1?label=python+&message=3.7%2B&color=blue)](https://img.shields.io/static/v1?label=python+&message=3.7%2B&color=blue)[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)[![PyPI version](https://badge.fury.io/py/deepl-fastapi.svg)](https://badge.fury.io/py/deepl-fastapi)
 
-Your own deepl server via fastapi, cross-platform (Windows/Linux/MacOs)
+Your own deepl server via fastapi, cross-platform (Windows/Linux/MacOs) with API for OmegaT
 
 ## Installation
 *   Create a virual environment: optional but recommended
@@ -89,3 +89,17 @@ print(resp.json())
 ## Interactive Docs (Swagger UI)
 
  [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+## OmegaT ``Fake MT`` plugin setup
+* Copy ``omegat-plugin-fake-mt-1.0.0.jar`` （available at https://github.com/briacp/omegat-plugin-fake-mt） to OmegaT\plugins （e.g., C:\Program Files\OmegaT\plugins） 
+
+Run``OmegaT``and setup ``omegat-plugin-fake-mt``
+```bash
+OmegaT/Preferences/Machine Translation/Fake MT/Configure
+	Name: Fake Deepl MT
+	URL: http://localhost:8000/text
+	Source Parameter: from_lang
+	Target Parameter: to_lang
+	Text Parameter: q
+```
+![](img/plugin-setup.png)

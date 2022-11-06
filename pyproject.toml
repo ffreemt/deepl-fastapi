@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deepl-fastapi"
-version = "0.1.0"
+version = "0.1.1"
 description = "deepl via fastapi"
 authors = ["freemt"]
 license = "MIT"
