@@ -19,8 +19,7 @@ from get_ppbrowser.get_ppbrowser import get_ppbrowser
 from logzero import logger
 from pydantic import BaseModel
 
-# import subprocess as sp
-
+from deepl_fastapi import __version__
 
 # lazy loading LOOP, wait for run_uvicorn to start first
 # import lazy_import
@@ -77,7 +76,10 @@ class Text(BaseModel):  # pylint: disable=too-few-public-methods
     description: Optional[str] = None
 
 
-app = FastAPI(title="deepl-fastapi")
+app = FastAPI(
+    title="deepl-fastapi",
+    version=__version__,
+)
 
 
 @app.post("/text/")
