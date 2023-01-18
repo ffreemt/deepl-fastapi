@@ -70,6 +70,7 @@ except Exception as exc_:
 
 class Text(BaseModel):  # pylint: disable=too-few-public-methods
     """Define Text model."""
+
     text: str
     from_lang: Optional[str] = None
     to_lang: Optional[str] = None
@@ -109,8 +110,10 @@ async def get_text(
         max_length=1500,
         min_length=1,
         title="text to translate",
-        description=("max. 5000 chars, paragraphs will not be preserved."
-        "multiple translations may be provided for short phrases."),
+        description=(
+            "max. 5000 chars, paragraphs will not be preserved."
+            "multiple translations may be provided for short phrases."
+        ),
     ),
     from_lang: Optional[str] = None,
     to_lang: Optional[str] = "zh",
@@ -151,7 +154,7 @@ def run_uvicorn():
     uvicorn.run(
         # app="deepl_fastapi.deepl_server:app",
         app=app,  # this should work with python -m deepl_fastapi.deepl_server
-        #still "attached to a different loop" error
+        # still "attached to a different loop" error
         host="0.0.0.0",
         # port=8000,
         port=port,
