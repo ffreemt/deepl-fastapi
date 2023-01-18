@@ -10,7 +10,11 @@
     "pylint": "nodemon -w deepl_fastapi -e .py -x pylint deepl_fastapi",
     "test:deepl_tr": "nodemon -w tests -e .py -x pytest -k deepl_tr tests",
     "serve_m": "nodemon -w deepl_fastapi -e .py -x python -m deepl_fastapi",
-    "serve_u": "uvicorn deepl_fastapi.deepl_server:app --reload"
+    "serve_u": "uvicorn deepl_fastapi.deepl_server:app --reload",
+    "prepare": "husky install"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
 }

@@ -1,7 +1,10 @@
 """Run uvicorn with deepl_fastapi.deepl_server:app.
 
 uvicorn deepl_fastapi.deepl_server:app --reload
+
+copy of run_uvicorn.py
 """
+# pylint: disable=duplicate-code
 from pathlib import Path
 from signal import SIG_DFL, SIGINT, signal
 
@@ -11,7 +14,7 @@ from logzero import logger
 
 
 def run_uvicorn(host="127.0.0.1", port=8000, debug=False, reload=False):
-    """Start uvicorn."""
+    """Run uvicorn."""
     uvicorn.run(
         app="deepl_fastapi.deepl_server:app",
         host=host,
